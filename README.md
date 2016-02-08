@@ -1,4 +1,3 @@
-# Basic Project
-## This file is modified to include a link to google site
+# Book Project
+### Create book class and subclasses describing type and genre.
 
-[Google](https://google.com)
