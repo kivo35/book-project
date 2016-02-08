@@ -12,21 +12,26 @@ public class Book
 	private String authorOrPublisher;
 	private String genre;
 
+	public Book()
+	{
+		this.setAuthorOrPublisher("Unknown");
+		this.setGenre("Unknown");
+	}
+
 	public Book(String authorOrPublisher, String genre)
 	{
-		super();
-		this.authorOrPublisher = authorOrPublisher;
-		this.genre = genre;
+		this.setAuthorOrPublisher(authorOrPublisher);
+		this.setGenre(genre);
 	}
 
 	public void environmentLocation()
 	{
-		if (this.genre.equalsIgnoreCase("Mystery") || this.genre.equalsIgnoreCase("Fantasy"))
+		if (this.getGenre().equalsIgnoreCase("Mystery") || this.getGenre().equalsIgnoreCase("Fantasy"))
 		{
 			System.out.println(
 					"The environment/setting might be comming from " + this.getAuthorOrPublisher() + " imagination");
 		}
-		else if (this.genre.equalsIgnoreCase("Biography") || this.genre.equalsIgnoreCase("Textbook"))
+		else if (this.getGenre().equalsIgnoreCase("Biography") || this.getGenre().equalsIgnoreCase("Text book"))
 		{
 			System.out.println(
 					"The environmnet used by " + this.getAuthorOrPublisher() + " is based on the real locaton");
@@ -49,7 +54,7 @@ public class Book
 
 	public void read()
 	{
-		System.out.println("I like to read" + this.getGenre() + " books");
+		System.out.println("I like to read " + this.getGenre() + " books");
 	}
 
 	public void setAuthorOrPublisher(String authorOrPublisher)
@@ -66,10 +71,10 @@ public class Book
 	public String toString()
 	{
 		StringBuilder builder = new StringBuilder();
-		builder.append("Book information: ");
+		builder.append("Book information:\n");
 		builder.append("\tAuthor or publisher: ");
 		builder.append(this.authorOrPublisher);
-		builder.append("\tgenre: ");
+		builder.append("\n\tgenre: ");
 		builder.append(this.genre);
 		return builder.toString();
 	}
