@@ -34,7 +34,7 @@ public class Book
 		else if (this.getGenre().equalsIgnoreCase("Biography") || this.getGenre().equalsIgnoreCase("Text book"))
 		{
 			System.out.println(
-					"The environmnet used by " + this.getAuthorOrPublisher() + " is based on the real locaton");
+					"The environmnet used by " + this.getAuthorOrPublisher() + " is based on the real location");
 		}
 		else
 		{
