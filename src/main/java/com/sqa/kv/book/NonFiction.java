@@ -22,8 +22,8 @@ public class NonFiction extends Book
 	public NonFiction(String authorOrPublisher, String genre, String region, boolean isReliableSource)
 	{
 		super(authorOrPublisher, genre);
-		this.region = region;
-		this.isReliableSource = isReliableSource;
+		this.setRegion(region);
+		this.setReliableSource(isReliableSource);
 	}
 
 	public String getRegion()
@@ -50,7 +50,7 @@ public class NonFiction extends Book
 	{
 		if (this.isReliableSource() == true)
 		{
-			System.out.println("The book's reliable source can be found on the internet");
+			System.out.println("The book's reliable source can be found on the Internet");
 		}
 		else
 		{
@@ -64,7 +64,7 @@ public class NonFiction extends Book
 		StringBuilder builder = new StringBuilder();
 		builder.append(super.toString());
 		builder.append("\nNon Fiction: ");
-		builder.append("\t based on reliable source:  ");
+		builder.append("\tbased on reliable source:  ");
 		builder.append(this.isReliableSource);
 		builder.append("\n\t\tthe region described in the book: ");
 		builder.append(this.region);
